@@ -85,7 +85,7 @@ const IngredientsSection = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <h4 className="font-semibold text-gray-800">
-                          {serumProduct.keyIngredients[activeIngredient].name}
+                          {products[0].keyIngredients[activeIngredient].name}
                         </h4>
                         <p className="text-sm text-gray-600 mt-1">
                           Active ingredient #{activeIngredient + 1}
