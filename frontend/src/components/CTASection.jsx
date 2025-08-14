@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { Sparkles, ShieldCheck, Truck, RotateCcw } from 'lucide-react';
-import { serumProduct, heroImages } from './mockData';
+import { products, brandInfo, heroImages } from './mockData';
 
 const CTASection = () => {
   const [isVisible, setIsVisible] = useState(false);
