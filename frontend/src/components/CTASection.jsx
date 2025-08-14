@@ -111,7 +111,7 @@ const CTASection = () => {
                 size="lg" 
                 className="bg-gradient-to-r from-amber-600 to-rose-500 hover:from-amber-700 hover:to-rose-600 text-white px-12 py-6 text-xl font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
               >
-                Order Now - ${serumProduct.price}
+                Shop Collection
               </Button>
               <Button 
                 variant="outline" 
