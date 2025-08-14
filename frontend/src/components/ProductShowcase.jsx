@@ -184,6 +184,7 @@ const ProductShowcase = () => {
                     </div>
                     <Button 
                       size="sm"
+                      onClick={() => addToCart(product)}
                       className="bg-gradient-to-r from-amber-600 to-rose-500 hover:from-amber-700 hover:to-rose-600 text-white px-4 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
                     >
                       <ShoppingCart className="w-4 h-4 mr-2" />
