@@ -77,24 +77,30 @@ const CTASection = () => {
               
               <div className="text-left">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {serumProduct.name}
+                  {brandInfo.name} Collection
                 </h3>
                 <div className="space-y-3 mb-6">
-                  {serumProduct.benefits.slice(0, 3).map((benefit, index) => (
-                    <div key={index} className="flex items-center text-gray-700">
-                      <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full mr-3"></div>
-                      {benefit}
-                    </div>
-                  ))}
+                  <div className="flex items-center text-gray-700">
+                    <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full mr-3"></div>
+                    6 Premium Products for Every Skin Need
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full mr-3"></div>
+                    Clinically Proven Active Ingredients
+                  </div>
+                  <div className="flex items-center text-gray-700">
+                    <div className="w-2 h-2 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full mr-3"></div>
+                    Swiss Luxury Manufacturing
+                  </div>
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">
-                  ${serumProduct.price}
+                  From $89
                   <span className="text-lg text-gray-600 font-normal ml-2">
-                    / {serumProduct.volume}
+                    Complete Skincare System
                   </span>
                 </div>
                 <p className="text-sm text-gray-600">
-                  That's only ${(serumProduct.price / 30).toFixed(2)} per day for luxury skincare
+                  Transform your skin with our science-backed luxury collection
                 </p>
               </div>
             </div>
