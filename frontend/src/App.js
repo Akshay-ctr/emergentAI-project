@@ -4,6 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HeroSection from "./components/HeroSection";
 import ProductFeatures from "./components/ProductFeatures";
 import IngredientsSection from "./components/IngredientsSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import FAQSection from "./components/FAQSection";
+import CTASection from "./components/CTASection";
+import Footer from "./components/Footer";
 
 const Home = () => {
   return (
@@ -11,6 +15,10 @@ const Home = () => {
       <HeroSection />
       <ProductFeatures />
       <IngredientsSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <CTASection />
+      <Footer />
     </div>
   );
 };
