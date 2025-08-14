@@ -34,7 +34,7 @@ const ProductShowcase = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-amber-50 to-rose-50">
+    <section className="py-24 bg-gradient-to-b from-white via-indigo-50 to-purple-50">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge className="bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-800 border-indigo-200 mb-4">
