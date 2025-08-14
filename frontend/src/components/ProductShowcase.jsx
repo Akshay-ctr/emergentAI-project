@@ -11,6 +11,7 @@ const ProductShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [visibleProducts, setVisibleProducts] = useState([]);
   const [hoveredProduct, setHoveredProduct] = useState(null);
+  const { addToCart } = useCart();
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
