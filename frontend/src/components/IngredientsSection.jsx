@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Leaf, Beaker, Gem, Droplets } from 'lucide-react';
-import { serumProduct, heroImages } from './mockData';
+import { products, heroImages } from './mockData';
 
 const IngredientsSection = () => {
   const [activeIngredient, setActiveIngredient] = useState(0);
