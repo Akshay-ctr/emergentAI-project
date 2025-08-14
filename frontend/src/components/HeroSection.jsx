@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from './ui/button';
-import { Sparkles, Star } from 'lucide-react';
-import { serumProduct, heroImages } from './mockData';
+import { Sparkles, Star, ArrowRight } from 'lucide-react';
+import { brandInfo, heroImages, products } from './mockData';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,27 +33,27 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
         {/* Content Side */}
         <div className={`space-y-8 transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-amber-100 to-rose-100 rounded-full border border-amber-200">
               <Star className="w-4 h-4 text-amber-600 mr-2" />
-              <span className="text-sm font-medium text-amber-800">Luxury Skincare Innovation</span>
+              <span className="text-sm font-medium text-amber-800">Swiss Luxury Skincare</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
               <span className="block bg-gradient-to-r from-amber-600 via-rose-500 to-orange-500 bg-clip-text text-transparent">
-                Emergent
+                {brandInfo.name}
               </span>
-              <span className="block text-4xl lg:text-5xl mt-2 text-gray-700">
-                Renewal Serum
+              <span className="block text-3xl lg:text-4xl mt-4 text-gray-700 font-light">
+                Skincare Collection
               </span>
             </h1>
             
             <p className="text-2xl lg:text-3xl font-light text-gray-600 italic">
-              {serumProduct.tagline}
+              {brandInfo.tagline}
             </p>
             
             <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-              {serumProduct.description}
+              {brandInfo.description}
             </p>
           </div>
 
@@ -62,41 +62,75 @@ const HeroSection = () => {
               size="lg" 
               className="bg-gradient-to-r from-amber-600 to-rose-500 hover:from-amber-700 hover:to-rose-600 text-white px-8 py-6 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              Shop Now - ${serumProduct.price}
+              Shop Collection
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               className="border-2 border-amber-300 text-amber-700 hover:bg-amber-50 px-8 py-6 text-lg font-medium rounded-full transition-all duration-300 transform hover:-translate-y-1"
             >
-              Learn More
+              Take Skin Quiz
             </Button>
           </div>
 
-          {/* Trust indicators */}
-          <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-            {serumProduct.certification.map((cert, index) => (
-              <div key={index} className="flex items-center">
-                <div className="w-2 h-2 bg-amber-400 rounded-full mr-2"></div>
-                {cert}
-              </div>
-            ))}
+          {/* Product highlights */}
+          <div className="grid grid-cols-2 gap-4 text-sm">
+            <div className="flex items-center text-gray-600">
+              <div className="w-3 h-3 bg-gradient-to-r from-amber-400 to-rose-400 rounded-full mr-3"></div>
+              6 Premium Products
+            </div>
+            <div className="flex items-center text-gray-600">
+              <div className="w-3 h-3 bg-gradient-to-r from-rose-400 to-orange-400 rounded-full mr-3"></div>
+              Dermatologist Tested
+            </div>
+            <div className="flex items-center text-gray-600">
+              <div className="w-3 h-3 bg-gradient-to-r from-orange-400 to-amber-400 rounded-full mr-3"></div>
+              Swiss Formulated
+            </div>
+            <div className="flex items-center text-gray-600">
+              <div className="w-3 h-3 bg-gradient-to-r from-amber-400 to-rose-400 rounded-full mr-3"></div>
+              Cruelty-Free & Vegan
+            </div>
           </div>
         </div>
 
-        {/* Product Image Side */}
+        {/* Product Showcase Side */}
         <div className={`relative transition-all duration-1000 delay-300 transform ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`}>
           <div className="relative">
             {/* Glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-amber-200 to-rose-200 rounded-full blur-3xl opacity-30 scale-110"></div>
             
-            {/* Main product image */}
+            {/* Main product showcase */}
             <div className="relative z-10 transform hover:scale-105 transition-transform duration-700">
               <img 
                 src={heroImages.mainProduct}
-                alt="Emergent Renewal Serum"
+                alt="LUMINA Skincare Collection"
                 className="w-full max-w-lg mx-auto object-contain drop-shadow-2xl"
               />
+            </div>
+            
+            {/* Featured product badges */}
+            <div className="absolute top-8 -left-4 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-amber-200">
+              <div className="text-center">
+                <div className="text-lg font-bold text-gray-900">Bestseller</div>
+                <div className="text-sm text-amber-600">Vitamin C Serum</div>
+                <div className="flex items-center justify-center mt-1">
+                  <Star className="w-3 h-3 text-amber-400 fill-current mr-1" />
+                  <span className="text-xs text-gray-600">4.9 (2.8k)</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="absolute bottom-12 -right-4 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-rose-200">
+              <div className="text-center">
+                <div className="text-lg font-bold text-gray-900">New Launch</div>
+                <div className="text-sm text-rose-600">Eye Renewal</div>
+                <div className="flex items-center justify-center mt-1">
+                  <Star className="w-3 h-3 text-amber-400 fill-current mr-1" />
+                  <span className="text-xs text-gray-600">4.8 (987)</span>
+                </div>
+              </div>
             </div>
             
             {/* Floating elements */}
