@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardHeader } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { Star, Heart, ShoppingCart, Info } from 'lucide-react';
+import { Star, Heart, ShoppingCart, Info, Eye } from 'lucide-react';
 import { products, categories } from './mockData';
+import { useCart } from '../context/CartContext';
 
 const ProductShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
