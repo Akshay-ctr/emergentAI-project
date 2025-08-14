@@ -28,7 +28,7 @@ const IngredientsSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Ingredients List */}
           <div className="space-y-6">
-            {serumProduct.keyIngredients.map((ingredient, index) => {
+            {products[0].keyIngredients.map((ingredient, index) => {
               const IconComponent = ingredientIcons[index];
               const isActive = activeIngredient === index;
               
