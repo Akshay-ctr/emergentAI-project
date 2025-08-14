@@ -110,9 +110,12 @@ const ProductShowcase = () => {
                     <button className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200 shadow-lg">
                       <Heart className="w-4 h-4 text-gray-600 hover:text-red-500" />
                     </button>
-                    <button className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200 shadow-lg">
-                      <Info className="w-4 h-4 text-gray-600 hover:text-blue-500" />
-                    </button>
+                    <Link 
+                      to={`/product/${product.id}`}
+                      className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors duration-200 shadow-lg"
+                    >
+                      <Eye className="w-4 h-4 text-gray-600 hover:text-blue-500" />
+                    </Link>
                   </div>
 
                   {/* Discount Badge */}
