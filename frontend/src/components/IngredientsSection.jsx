@@ -143,7 +143,7 @@ const IngredientsSection = () => {
                     <Droplets className="w-10 h-10 text-amber-600" />
                   </div>
                   <div className="text-sm text-gray-600">
-                    <span className="font-semibold text-2xl text-gray-800">{serumProduct.volume}</span>
+                    <span className="font-semibold text-2xl text-gray-800">{products[0].volume}</span>
                     <br />
                     Premium bottle size
                   </div>
