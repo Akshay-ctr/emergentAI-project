@@ -121,7 +121,7 @@ const IngredientsSection = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-4">Application Method</h4>
                   <p className="text-gray-600 leading-relaxed mb-4">
-                    {serumProduct.usage}
+                    {products[0].usage}
                   </p>
                   <div className="space-y-3">
                     <div className="flex items-center text-sm text-gray-600">
